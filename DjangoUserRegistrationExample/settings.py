@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_registration',
+    'example'
 ]
 
 MIDDLEWARE = [
@@ -122,3 +123,4 @@ STATIC_URL = '/static/'
 
 
 ACCOUNT_ACTIVATION_DAYS = 7
+AUTH_USER_MODEL = 'example.User'
