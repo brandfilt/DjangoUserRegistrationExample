@@ -16,18 +16,18 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from django_registration.backends.activation.views import RegistrationView
+from django_registration.backends.one_step.views import RegistrationView
 
 from example.forms import UserForm
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('accounts/register/',
+    path('register/',
          RegistrationView.as_view(
              form_class=UserForm
          ),
          name='django_registration_register',
     ),
-    path('accounts/', include('django_registration.backends.one_step.urls')),
-    path('accounts/', include('django.contrib.auth.urls')),
+    path('', include('django_registration.backends.one_step.urls')),
+    path('', include('django.contrib.auth.urls')),
 ]

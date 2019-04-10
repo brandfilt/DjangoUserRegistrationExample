@@ -1,4 +1,4 @@
-# Django User Registration Template
+# Django User Registration Example
 
-A Django template project with user registration, password reset etc. features configured by default.
+A Django example project with user registration, password reset etc. features configured by default.
 
